@@ -1,0 +1,26 @@
+Dolphin Connector
+=================
+
+https://github.com/poetinha/dolphin-connector
+
+License
+-------
+
+See the file LICENSE.
+
+Build Requirements
+------------------
+
+ Boost C++ library
+
+Building from git
+-----------------
+
+$ ./autogen.sh
+$ ./configure
+$ make
+
+Limitations
+-----------
+
+ - no support for prepared statements
