@@ -37,6 +37,6 @@ AC_SUBST(MYSQL_INCLUDE)
 AC_SUBST(MYSQL_LIBS)
 
 dnl Output files
-AC_CONFIG_FILES([Makefile include/Makefile])
+AC_CONFIG_FILES([Makefile include/Makefile sample/Makefile])
 
 AC_OUTPUT
