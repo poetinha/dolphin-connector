@@ -41,6 +41,10 @@ class Connection : private boost::noncopyable {
 
   uint64_t get_last_insert_id() const;
 
+  int get_last_errno() const;
+  const char* get_sqlstate() const;
+  const char* get_error_msg() const;
+
   std::string escape(const char* text) const;
   std::string escape(const std::string& text) const;
 

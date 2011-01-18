@@ -115,6 +115,24 @@ uint64_t Connection::get_last_insert_id() const {
   return mysql_insert_id(db_);
 }
 
+int Connection::get_last_errno() const {
+  if (!db_)
+    return -1;
+  return mysql_errno(db_);
+}
+
+const char* Connection::get_sqlstate() const {
+  if (!db_)
+    return "HY000";
+  return mysql_sqlstate(db_);
+}
+
+const char* Connection::get_error_msg() const {
+  if (!db_)
+    return "";
+  return mysql_error(db_);
+}
+
 std::string Connection::escape(const char* text) const {
   const size_t len = strlen(text);
   boost::scoped_array<char> buffer(new char[len * 2 + 1]);
