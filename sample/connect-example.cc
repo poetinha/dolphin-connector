@@ -13,7 +13,8 @@ int main(int argc, const char** argv) {
 
   if (!db->open("test", "joe", "doe", std::string(),
                 0, std::string())) {
-    fprintf(stderr, "Could not connect!\n");
+    fprintf(stderr, "MySQL error %d, SQLState %s: %s\n", db->get_last_errno(),
+            db->get_sqlstate(), db->get_error_msg());
     return 1;
   }
 
