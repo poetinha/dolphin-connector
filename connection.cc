@@ -59,16 +59,16 @@ bool Connection::open(const std::string& db,
   mysql_options(db_, MYSQL_OPT_RECONNECT, &reconnect);
 
   if (!mysql_real_connect(db_,
-                          host.empty() ? static_cast<const char *>(0)
+                          host.empty() ? static_cast<const char*>(0)
                                        : host.c_str(),
-                          user.empty() ? static_cast<const char *>(0)
+                          user.empty() ? static_cast<const char*>(0)
                                        : user.c_str(),
-                          password.empty() ? static_cast<const char *>(0)
+                          password.empty() ? static_cast<const char*>(0)
                                            : password.c_str(),
-                          db.empty() ? static_cast<const char *>(0)
+                          db.empty() ? static_cast<const char*>(0)
                                      : db.c_str(),
                           (port > -1) ? port : 0,
-                          unix_socket.empty() ? static_cast<const char *>(0)
+                          unix_socket.empty() ? static_cast<const char*>(0)
                                               : unix_socket.c_str(),
                           flags)) {
     return false;
