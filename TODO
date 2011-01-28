@@ -1,0 +1,5 @@
+1) Remove dependency on MySQL client library
+2) Implement stored procedure support
+
+---
+27 January 2011
