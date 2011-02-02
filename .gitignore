@@ -1,0 +1,10 @@
+*.lo
+*.o
+*.la
+Makefile
+Makefile.in
+.deps
+.libs
+*~
+/tags
+.*.swp
