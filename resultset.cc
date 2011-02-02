@@ -34,6 +34,12 @@ void ResultSet::close() {
   connection_ = NULL;
 }
 
+uint64_t ResultSet::row_count() const {
+  if (!is_valid())
+    return 0;
+  return mysql_num_rows(result_);
+}
+
 int ResultSet::column_count() const {
   if (!is_valid())
     return 0;

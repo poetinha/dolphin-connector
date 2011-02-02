@@ -31,8 +31,9 @@ class ResultSet : private boost::noncopyable {
 
   void close();
 
-  int column_count() const;
+  uint64_t row_count() const;
 
+  int column_count() const;
   bool column_bool(int col) const;
   int column_int(int col) const;
   int64_t column_int64(int col) const;
