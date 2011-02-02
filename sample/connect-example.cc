@@ -30,7 +30,7 @@ int main(int argc, const char** argv) {
 
   boost::scoped_ptr<dolphinconn::ResultSet> res(db->execute_query("SELECT "
         "bar, baz FROM foo"));
-  if (res)
+  if (res->is_valid())
     while (res->step()) {
       fprintf(stderr, "%d: %s\n",
               res->column_int(0), res->column_string(1).c_str());
