@@ -40,6 +40,7 @@ class Connection : private boost::noncopyable {
   ResultSet* execute_query(const std::string& sql);
 
   uint64_t get_last_insert_id() const;
+  uint64_t get_affected_rows() const;
 
   int get_last_errno() const;
   const char* get_sqlstate() const;

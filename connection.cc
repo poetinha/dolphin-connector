@@ -115,6 +115,12 @@ uint64_t Connection::get_last_insert_id() const {
   return mysql_insert_id(db_);
 }
 
+uint64_t Connection::get_affected_rows() const {
+  if (!db_)
+    return 0;
+  return mysql_affected_rows(db_);
+}
+
 int Connection::get_last_errno() const {
   if (!db_)
     return -1;
