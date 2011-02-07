@@ -1,0 +1,6 @@
+Changes in 1.1 (07 Feb 2011):
+ * Add error methods. (87599be)
+ * Update sample code to use error methods. (ee367f6)
+ * Add row_count method. (4910ee7)
+ * Add get_affected_rows method. (f23e772)
+ * Add note about the index argument. (f8cd1bf)
