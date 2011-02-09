@@ -53,13 +53,25 @@ bool ResultSet::column_bool(int col) const {
 int ResultSet::column_int(int col) const {
   if (!is_valid())
     return 0;
-  return atoi(row_[col]);
+  return static_cast<int>(strtol(row_[col], NULL, 10));
+}
+
+uint32_t ResultSet::column_uint(int col) const {
+  if (!is_valid())
+    return 0;
+  return static_cast<uint32_t>(strtoul(row_[col], NULL, 10));
 }
 
 int64_t ResultSet::column_int64(int col) const {
   if (!is_valid())
     return 0;
   return strtoll(row_[col], NULL, 10);
+}
+
+uint64_t ResultSet::column_uint64(int col) const {
+  if (!is_valid())
+    return 0;
+  return strtoull(row_[col], NULL, 10);
 }
 
 double ResultSet::column_double(int col) const {
