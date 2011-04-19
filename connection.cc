@@ -14,13 +14,14 @@
 
 #include "dolphinconn/resultset.h"
 
-static int instance_count = 0;
-
 namespace dolphinconn {
+
+// static
+boost::detail::atomic_count Connection::instance_count_(0);
 
 Connection::Connection()
     : db_(NULL) {
-  instance_count++;
+  ++instance_count_;
   initialize();
 }
 
@@ -36,8 +37,7 @@ void Connection::initialize() {
 
 Connection::~Connection() {
   close();
-  instance_count--;
-  if (instance_count == 0)
+  if (--instance_count_ == 0)
     mysql_library_end();
 }
 

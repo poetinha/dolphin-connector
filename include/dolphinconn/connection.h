@@ -11,6 +11,7 @@
 #include <stdint.h>
 #include <string>
 
+#include <boost/detail/atomic_count.hpp>
 #include <boost/noncopyable.hpp>
 
 struct st_mysql;
@@ -53,6 +54,7 @@ class Connection : private boost::noncopyable {
   void initialize();
 
   st_mysql* db_;
+  static boost::detail::atomic_count instance_count_;
 };
 
 } // namespace dolphinconn
