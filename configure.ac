@@ -3,7 +3,7 @@ dnl William Lima <wlima@primate.com.br>
 
 AC_PREREQ([2.59])
 
-AC_INIT([Dolphin Connector], [1.1], [wlima@primate.com.br])
+AC_INIT([Dolphin Connector], [1.2], [wlima@primate.com.br])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR(README)
 AM_INIT_AUTOMAKE([1.9 foreign])

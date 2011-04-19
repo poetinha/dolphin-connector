@@ -1,3 +1,7 @@
+Changes in 1.2 (19 Apr 2011):
+ * Replace atoi(), New methods (column_uint, column_uint64). (fa1f650)
+ * Use atomic op to increment or decrement instance_count_. (1bdeda8)
+
 Changes in 1.1 (07 Feb 2011):
  * Add error methods. (87599be)
  * Update sample code to use error methods. (ee367f6)
