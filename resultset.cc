@@ -83,7 +83,7 @@ double ResultSet::column_double(int col) const {
 std::string ResultSet::column_string(int col) const {
   if (!is_valid())
     return "";
-  const char* str = reinterpret_cast<const char*>(row_[col]);
+  const char* str = row_[col];
   size_t len = mysql_fetch_lengths(result_)[col];
 
   std::string result;
