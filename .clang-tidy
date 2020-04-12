@@ -1,0 +1,19 @@
+---
+Checks: 'google-build-namespaces,
+         google-explicit-constructor,
+         google-readability-casting,
+         modernize-avoid-c-arrays,
+         modernize-redundant-void-arg,
+         modernize-use-auto,
+         modernize-use-bool-literals,
+         modernize-use-equals-default,
+         modernize-use-equals-delete,
+         modernize-use-nullptr,
+         modernize-use-override,
+         readability-function-size'
+WarningsAsErrors: '*'
+FormatStyle: file
+CheckOptions:
+  - key:    google-readability-function-size.StatementThreshold
+    value:  '450'
+...
